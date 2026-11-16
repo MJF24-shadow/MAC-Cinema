@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> <meta charset="UTF-8">
+        <title>MAC Cinema</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles.css" rel="stylesheet">
+
+        <script src="app.js" defer></script> <!-- loads external JavaScript file -->
+    </head>
+
+    <body>
+        <!-- HEADER AND NAVIGATIONAL BAR -->
+        <header> <!-- start of header-->
+            <nav>
+                <ul>
+                    <li><a href="#movies">Movies</a></li>
+                    <li><a href="login.html">Tickets</a></li>
+                    <li><a href="register.html">Account</a></li>
+                </ul>
+            </nav>
+        </header> <!-- end of header-->
+        
+        <main> <!--start of main-->
+
+            <!-- MOVIE POSTERS AND SHOWTIMES -->
+            <section id="movies">
+            <h2>Movies Now Showing</h2>
+
+            <div id="movies-theatres-grid"></div> <!--movie cards produced by JS-->
+
+            <h2>Movies Coming Soon</h2>
+
+            <div id="movies-soon-grid"></div> <!--movie cards produced by JS-->
+            </section>
+            
+
+            <!-- SEAT SELECTION AND BOOKING FORM -->
+            <section id="booking" hidden>
+            <!--seat selection via interactive map-->
+            <h2>Seat Selection</h2>
+
+            <p>Select your seat(s)</p>
+
+            <div id="seat-map"></div>
+
+            <!--booking form with previous showtime and seat data-->
+            <h2>Booking Form</h2>
+            <p>Complete your ticket booking</p>
+
+            <form>
+                <div id="booking-summary"> </div> <!--shows ticket booking summary with total price-->
+
+                <div id="error-message"></div> <!--handles invalid user input-->
+
+                <button type="submit">Confirm booking</button>
+
+            </form>
+
+
+
+            </section>
+
+
+            <section id="ai-assistance">
+
+            </section>
+           
+            
+            
+        </main> <!--end of main-->
+        
+        <footer>Copyright 2026</footer>
+      
+    </body>
+</html>
