@@ -11,11 +11,16 @@
     <body>
         <!-- HEADER AND NAVIGATIONAL BAR -->
         <header> <!-- start of header-->
+            <div id="page-header">
+                <h1>MAC Cinema</h1>
+                <img src="images/CinemaLogo.PNG" alt="MAC Cinema Logo" class="header-image">
+
+            </div>
             <nav>
                 <ul>
                     <li><a href="#movies">Movies</a></li>
-                    <li><a href="login.html">Tickets</a></li>
-                    <li><a href="register.html">Account</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
                 </ul>
             </nav>
         </header> <!-- end of header-->
@@ -24,37 +29,50 @@
 
             <!-- MOVIE POSTERS AND SHOWTIMES -->
             <section id="movies">
-            <h2>Movies Now Showing</h2>
-
-            <div id="movies-theatres-grid"></div> <!--movie cards produced by JS-->
-
-            <h2>Movies Coming Soon</h2>
-
-            <div id="movies-soon-grid"></div> <!--movie cards produced by JS-->
+                <h2>Movies Now Showing</h2>
+                <div id="movies-theatres-grid"></div> <!--movie cards produced by JS-->
+                
+                <h2>Movies Coming Soon</h2>
+                <div id="movies-soon-grid"></div> <!--movie cards produced by JS-->
             </section>
             
 
             <!-- SEAT SELECTION AND BOOKING FORM -->
             <section id="booking" hidden>
-            <!--seat selection via interactive map-->
-            <h2>Seat Selection</h2>
+                <!--seat selection via interactive map-->
+                <h2>Seat Selection</h2>
+                <p id="selected-movie-info"></p>
+                
+                <div id="seat-map"></div>
 
-            <p>Select your seat(s)</p>
+                <!--booking form with previous showtime and seat data-->
+                <h2>Booking Form</h2>
+                <p>Complete your ticket booking</p>
+                
+                <form id="booking-form" action="submission.html" method="post">
 
-            <div id="seat-map"></div>
+                    <input type="hidden" id="movie-form" name="movieId">
+                    <input type="hidden" id="showtime-form" name="showtimeId">
 
-            <!--booking form with previous showtime and seat data-->
-            <h2>Booking Form</h2>
-            <p>Complete your ticket booking</p>
 
-            <form>
-                <div id="booking-summary"> </div> <!--shows ticket booking summary with total price-->
+                    <div class="booking-summary">
+                        <p>Seats: <span id="selected-seats">None</span></p>
+                        <p>Total Price $<span id="total-price">0.00</span></p>
+                    </div> <!--shows ticket booking summary with total price-->
 
-                <div id="error-message"></div> <!--handles invalid user input-->
+                    <div class="form-group">
+                        <label for="customer-name">Full Name</label>
+                        <input type="text" id="customer-name" name="customerName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customer-email">Email Address</label>
+                        <input type="email" id="customer-email" name="customerEmail" required>
+                    </div>
 
-                <button type="submit">Confirm booking</button>
-
-            </form>
+                    <div id="error-message"></div> <!--handles invalid user input-->
+                    <button type="submit">Confirm booking</button>
+                </form>
 
 
 
