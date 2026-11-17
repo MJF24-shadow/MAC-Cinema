@@ -3,36 +3,59 @@
     <head> <meta charset="utf-8">
         <title>Login | Account</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles.css" rel="stylesheet">
+        <script src="auth.js" defer></script>
     </head>
 
     <body>
-        <form id="login-form" action="submission.html" method="post">
-            <div class="container">
-                <h1>Login</h1>
-                <p>Enter your login credentials to sign in.</p>
-                <hr>
-                <!-- Email Adress Field -->
-                <div class="form-group">
-                    <label for="email"><b>Email</b></label>
-                    <input type="text" placeholder="jsmith123@email.com" name="email" id="email" required>
+        <!-- HEADER AND NAVIGATIONAL BAR -->
+        <header> <!-- start of header-->
+            <div id="page-header">
+                <h1>MAC Cinema</h1>
+                <img src="images/CinemaLogo.PNG" alt="MAC Cinema Logo" class="header-image">
+
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Main Menu</a></li>
+                    <li><a href="#movies">Favorites</a></li>
+                    <li><a href="#movies">Group Booking</a></li>
+                    <li><a href="login.html">Account</a></li>
+                
+                </ul>
+            </nav>
+        </header> <!-- end of header-->
+
+        <main>
+            <form id="login-form" method="post" novalidate>
+                <div class="account-form">
+                    <h2>Login</h2>
+                    <p>Enter your login credentials to sign in.</p>
+                    
+                    <!-- Email Adress Field -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" placeholder="jsmith123@email.com" name="email" id="email" required>
+                    </div>
+                    
+                    <!-- Password Field -->
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" placeholder="**********" name="password" id="password" required>
+                    </div>
+                    
+                    <div id="error-message" class="error-banner" role="alert" hidden></div> <!--handles invalid user input-->
+                    
+                    <button type="submit" class="registerbtn">Log In</button>
+                
                 </div>
                 
-                
-                <!-- Password Field -->
-                <div class="form-group">
-                    <label for="password"><b>Password</b></label>
-                    <input type="password" placeholder="**********" name="password" id="password" required>
+                <div class="signup">
+                    <p>Don't have an account? <a href="register.html">Sign Up</a>.</p>
                 </div>
-                <hr>
-    
-                <div id="error-message"></div> <!--handles invalid user input-->
-                <button type="submit" class="registerbtn">Log In</button>
-            </div>
-            
-            <div class="container signin">
-                <p>Don't have an account <a href="register.html">Sign Up</a>.</p>
-            </div>
-        </form>
+            </form>
+
+        </main>
 
     </body>
 </html>
