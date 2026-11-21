@@ -152,17 +152,22 @@ p, label{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#login-form, #register-form{
+    background-color: #1f214f;
+}
+
 /* Bordered form */
 form {
-  border: 3px solid rgba(255, 255, 255, 0.25);;
-  padding: 25px;
-  margin: 2.5rem auto;
-  width: 90%;
-  max-width: 420px;
 
-  box-shadow:
-   0 10px 25px rgba(0, 0, 0, 0.55), 
-   0 4px 10px rgba(0, 0, 0, 0.35);;
+    border: 3px solid rgba(255, 255, 255, 0.25);;
+    padding: 25px;
+    margin: 2.5rem auto;
+    width: 90%;
+    max-width: 420px;
+    
+    box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.55), 
+    0 4px 10px rgba(0, 0, 0, 0.35);;
 }
 
 .form-group{

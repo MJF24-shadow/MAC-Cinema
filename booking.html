@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> <meta charset="UTF-8">
+        <title>MAC Cinema</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles.css" rel="stylesheet">
+
+        <script src="movie-data.js" defer></script> <!-- loads external JavaScript file -->
+        <script src="booking.js" defer></script>
+    </head>
+
+    <body>
+        <!-- HEADER AND NAVIGATIONAL BAR -->
+        <header> <!-- start of header-->
+            <div id="page-header">
+                <h1>MAC Cinema</h1>
+                <img src="images/CinemaLogo.PNG" alt="MAC Cinema Logo" class="header-image">
+
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Main Menu</a></li>
+                    <li><a href="#movies">Favorites</a></li>
+                    <li><a href="#movies">Group Booking</a></li>
+                    <li><a href="login.html#login-form">Account</a></li>
+                
+                </ul>
+            </nav>
+        </header> <!-- end of header-->
+        
+        <main> <!--start of main-->
+
+            <!-- SELECTED MOVIE AND SHOWTIME PICKER -->
+            <section id="movies-booking-header">
+                <div class="booking-movie-card">
+                    <img id="booking-movie-poster" src="" alt="" class="movie-poster" hidden>
+                    <div class="booking-movie-details">
+                        <h2 id="booking-movie-title">Loading Movie...</h2>
+                        <p id="booking-movie-meta"></p>
+                        <p id="booking-movie-description"></p>
+                        
+                        <div class="showtime-picker">
+                            <h3>Pick a Showtime</h3>
+                            <div id="showtime-btns" class="showtime-btns" role="group" hidden></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+
+            <!-- INTERACTIVE SEAT MAP BOOKING FORM -->
+            <section id="seat-selection" hidden>
+                <h3 id="seat-heading">Select Your Seats</h3>
+                <p id="selected-showtime-banner"></p>
+
+                <ul class="seat-legend">
+                    <li><span class="seat-sample available"></span> Available</li>
+                    <li><span class="seat-sample selected"></span> Selected</li>
+                    <li><span class="seat-sample occupied"></span> Occupied</li>
+                </ul>
+
+                <div class="screen-indicator" aria-hidden="true">SCREEN</div>
+                <div id="seat-map" class="seat-grid" role="group" aria-label="Cinema Seating Map"></div>
+                
+                <!-- Accessible Booking Form -->
+                <form id="booking-form" method="post" novalidate>
+                    <input type="hidden" id="form-movie-id" name="movieId">
+                    <input type="hidden" id="form-showtime" name="showtime">
+                    
+                    <!-- Live Running Total -->
+                     <div class="booking-summary" aria-live="polite">
+                        <p>Selected Seats: <span id="selected-seats-list">None</span></p>
+                        <p>Total Price: $<span id="total-price">0.00</span></p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customer-name">Full Name*</label>
+                        <input type="text" id="customer-name" name="customerName" placeholder="John Smith" autocomplete="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customer-email">Email Address*</label>
+                        <input type="email" id="customer-email" name="customerEmail" placeholder="jsmith123@email.com" autocomplete="email" required>
+                    </div>
+                    
+                    <div id="error-message" class="error-banner" role="alert" hidden></div>
+                    <button type="submit" class="registerbtn">Confirm Booking</button>
+                </form>
+
+            </section>
+            
+        </main> <!--end of main-->
+        
+        <footer>Copyright 2026</footer>
+      
+    </body>
+</html>
