@@ -20,7 +20,6 @@ h1, h2, h3{
 
 }
 
-
 .header-image{
     width: auto;
     max-width: 100%;
@@ -61,6 +60,57 @@ footer{
     color: white;
     font-family:'Courier New', Courier, monospace;
 }
+
+/*----------------------------------- MOVIE CARDS -----------------------------------*/
+#movies-theatres-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.movie-card{
+    background-color: black;
+    border: 1px solid #D6A23A;
+    border-radius: 5px;
+    overflow: hidden; /* Ensures the image doesn't bleed out of the border-radius */
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Stack image on top, text on bottom inside the card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.movie-card h2{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    margin: 0 0 0.75rem;
+    min-height: 2.8rem;
+    gap: 0.5rem;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.movie-card p{
+   margin: 0 0 0.75rem;
+   line-height: 1.4;
+}
+
+.movie-card:hover{
+    transform: translateY(-5px); /*hover effect*/
+}
+
+.movie-poster{
+    max-width: 100%; /*fluid constaints for images*/
+    height: 240px;
+    object-fit: contain;
+    display: block;
+    margin: 0.5rem auto 0 auto;
+   
+}
+
 
 /*---------------------------- LOGIN AND REGISTER FILES -----------------------------*/
 
