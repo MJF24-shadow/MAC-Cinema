@@ -10,6 +10,20 @@ h1, h2, h3{
     color: #D6A23A;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+a {
+    font-family:'Courier New', Courier, monospace;
+    color: white;
+}
+
+a:hover{
+    color:#D6A23A;
+}
+
+a:active{
+    color:#199b2c;
+}
+
 #page-header{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #070a30;
@@ -42,19 +56,6 @@ nav ul{
 
 
 
-nav a{
-    font-family:'Courier New', Courier, monospace;
-    color: white;
-}
-
-nav a:hover{
-        color:#D6A23A;
-    }
-
-nav a:active{
-        color:#199b2c;
-    }
-
 
 footer{
     color: white;
@@ -62,7 +63,7 @@ footer{
 }
 
 /*----------------------------------- MOVIE CARDS -----------------------------------*/
-#movies-theatres-grid{
+#movies-theatres-grid, #movies-soon-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
@@ -71,31 +72,56 @@ footer{
 }
 
 .movie-card{
-    background-color: black;
+    background-color:#1f214f;
     border: 1px solid #D6A23A;
     border-radius: 5px;
     overflow: hidden; /* Ensures the image doesn't bleed out of the border-radius */
     display: flex;
     align-items: center;
     flex-direction: column; /* Stack image on top, text on bottom inside the card */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     transition: transform 0.2s ease;
 }
 
-.movie-card h2{
+.movie-card h3{
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem); /*use of clamp() to adjust font size depending on screen size*/
+    color: #D6A23A;
+    text-align: center;
+    padding: 1rem 1rem 0 1rem;
+    max-width: 100%; /*prevents horzontal side-scrolling*/
+    margin: 0;
+    box-sizing: border-box;
+    min-height: calc(3.75em + 1rem);  /* 3 lines * 1.25 line-height + 1rem top padding = 4.75em */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container for text inside the card */
+.movie-card-content {
+    padding: 1.2rem;
     display: flex;
     flex-direction: column;
-    font-size: 1.2rem;
-    margin: 0 0 0.75rem;
-    min-height: 2.8rem;
+    justify-content: space-between;
     gap: 0.5rem;
     flex-grow: 1;
     text-align: center;
 }
 
-.movie-card p{
-   margin: 0 0 0.75rem;
-   line-height: 1.4;
+
+.movie-card-content p, .movie-card-content a{
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.movie-card-content a:hover{
+    color:#D6A23A;
+}
+
+.movie-card-content a:active{
+    color:#199b2c;
 }
 
 .movie-card:hover{
@@ -103,12 +129,13 @@ footer{
 }
 
 .movie-poster{
-    max-width: 100%; /*fluid constaints for images*/
-    height: 240px;
-    object-fit: contain;
+    width: 170px;
+    max-width: 82%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
     display: block;
     margin: 0.5rem auto 0 auto;
-   
+    border-radius: 4px; 
 }
 
 
