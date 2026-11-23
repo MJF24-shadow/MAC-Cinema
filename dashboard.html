@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> <meta charset="UTF-8">
+        <title>Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles.css" rel="stylesheet">
+
+        <script src="movie-data.js"></script>
+        <script src="dashboard.js" defer></script> <!-- loads external JavaScript file -->
+    </head>
+
+    <body>
+        <!-- HEADER AND NAVIGATIONAL BAR -->
+        <header> <!-- start of header-->
+            <div id="page-header">
+                <h1>MAC Cinema</h1>
+                <img src="images/CinemaLogo.PNG" alt="MAC Cinema Logo" class="header-image">
+
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Main Menu</a></li>
+                    <li><a href="#movies">Favorites</a></li>
+                    <li><a href="#movies">Group Booking</a></li>
+                    <li><a href="login.html">Account</a></li>
+                
+                </ul>
+            </nav>
+        </header> <!-- end of header-->
+        
+        <main> <!--start of main-->
+
+            <!-- MOVIE POSTERS AND SHOWTIMES -->
+            <section id="movies">
+                <h2>Movies Now Showing</h2>
+                <p>Click on a movie poster to view showtimes.</p>
+                <div id="movies-theatres-grid"></div> <!--movie cards produced by JS-->
+                
+                <h2>Movies Coming Soon</h2>
+                <div id="movies-soon-grid"></div> <!--movie cards produced by JS-->
+            </section>
+
+
+            <section id="ai-assistance">
+
+            </section>
+           
+            
+            
+        </main> <!--end of main-->
+        
+        <footer>Copyright 2026</footer>
+      
+    </body>
+</html>

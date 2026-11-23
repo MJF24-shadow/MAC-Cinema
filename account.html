@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> <meta charset="UTF-8">
+        <title>Settings | Account</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles.css" rel="stylesheet">
+
+        <script src="auth.js"></script> <!-- loads external JavaScript file -->
+    </head>
+
+    <body>
+        <!-- HEADER AND NAVIGATIONAL BAR -->
+        <header> <!-- start of header-->
+            <div id="page-header">
+                <h1>MAC Cinema</h1>
+                <img src="images/CinemaLogo.PNG" alt="MAC Cinema Logo" class="header-image">
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Main Menu</a></li>
+                    <li><a href="#movies">Favorites</a></li>
+                    <li><a href="#movies">Group Booking</a></li>
+                    <li><a href="login.html">Account</a></li>
+                </ul>
+            </nav>
+
+        </header> <!-- end of header-->
+        
+        <main> <!--start of main-->
+            <form id="profile-form" method="post" novalidate>
+                <div class="account-form">
+                    <h2>Profile Information</h2>
+                    <p>Update your personal information below.</p>
+                    
+                    <!-- First Name Field -->
+                    <div class="form-group">
+                        <label for="first-name">First Name*</label>
+                        <input type="text" name="firstName" id="first-name" required>
+                    </div>
+                    
+                    <!-- Last Name Field -->
+                    <div class="form-group">
+                        <label for="last-name">Last Name*</label>
+                        <input type="text" name="lastName" id="last-name" required>
+                    </div>
+
+                    <!-- Email Adress Field -->
+                    <div class="form-group">
+                        <label for="email">Email*</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                
+                    <div id="profile-error-message" class="error-banner" role="alert" hidden></div> <!--handles invalid user input-->
+                    <button type="submit" class="profilebtn">Save Profile</button>
+                
+                </div>
+            </form>
+
+            <form id="password-form" method="post" novalidate>
+                <div class="account-form">
+                    <h2>Change Password</h2>
+                    <p>Enter your current password to set a new one.</p>
+
+                    <!-- Current Password Field -->
+                    <div class="form-group">
+                        <label for="current-password">Current Password*</label>
+                        <input type="password" name="current-password" id="current-password" required>
+                    </div>
+  
+                    <!-- New Password Field -->
+                    <div class="form-group">
+                        <label for="new-password">New Password*</label>
+                        <input type="password" name="new-password" id="new-password" required>
+                    </div>
+                    
+                    <!-- Repeat Password Field -->
+                    <div class="form-group">
+                        <label for="confirm-psw">Confirm New Password*</label>
+                        <input type="password" name="confirm-password" id="confirm-password" required>
+                    </div>
+                
+                    <div id="password-error-message" class="error-banner" role="alert" hidden></div> <!--handles invalid user input-->
+                    <button type="submit" class="passwordbtn">Update Password</button>
+                </div>
+
+            </form>
+
+            <!-- LOGOUT / BACK TO MAIN MENU LINK -->
+            <div class="signout">
+                <p><a href="index.html">Back to Main Menu</a> | <a href="login.html" id="logout-link">Sign Out</a></p>
+            </div>
+
+        </main> <!--end of main-->
+        
+        <footer>Copyright 2026</footer>
+      
+    </body>
+</html>
